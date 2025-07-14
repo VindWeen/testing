@@ -38,7 +38,7 @@
 </head>
 
 <body>
-
+    
     <div class="loader" id="loader" style="display:none">
         <div class="loader-inner"
             style="width: 100vw; height: 100vh;display: flex; justify-content: center; align-items: center;">
@@ -109,55 +109,35 @@
                                     </h5>
                                 </div>
                                 <form action="#" method="post" id="login_form_client">
-                                    <div class="form-group first">
-                                        <label for="email_login">E-mail</label>
-                                        <input type="email" class="form-control" id="email_login" name="email" value=""
-                                            required>
-                                    </div>
-                                    <div class="form-group last mb-4">
-                                        <label for="password_login">Mật khẩu</label>
-                                        <input type="password" class="form-control" id="password_login" name="password"
-                                            required>
-                                    </div>
-                                    <div class="d-flex mb-5 align-items-center" style="margin-bottom: 2rem !important;">
-                                        <label class="control control--checkbox mb-0"><span class="caption">Hiện mật
-                                                khẩu</span>
-                                            <input type="checkbox" href="javascript:void(0)" id="hide_pass"
-                                                onclick="unhide_pass(this)">&nbsp;
+                                        <div class="form-group first">
+                                            <label for="email_login">E-mail</label>
+                                            <input type="email" class="form-control" id="email_login" name="email" value="" required>
+                                        </div>
+                                        <div class="form-group last mb-4">
+                                            <label for="password_login">Mật khẩu</label>
+                                            <input type="password" class="form-control" id="password_login" name="password" required>
+                                        </div>
+                                        <div class="d-flex mb-5 align-items-center" style="margin-bottom: 2rem !important;">
+                                            <label class="control control--checkbox mb-0"><span class="caption">Hiện mật khẩu</span>
+                                            <input type="checkbox" href="javascript:void(0)" id="hide_pass" onclick="unhide_pass(this)">&nbsp;
                                             <div class="control__indicator"></div>
-                                        </label>
-                                        <span class="ml-auto"><a href="javascript:void(0)" id="forgot_password_button"
-                                                onclick="toggleView(this)" class="forgot-pass">Quên mật khẩu?</a></span>
-                                    </div>
-                                    <p style="color:red;float: left;"></p>
-                                    <input type="button" onclick="handle_login_client()" value="Đăng nhập"
-                                        class="btn btn-block btn-primary"> <span
-                                        class="d-block text-center my-4 text-muted"
-                                        style="margin-bottom: 1rem !important;margin-top: 1rem !important;">&mdash; hoặc
-                                        &mdash;</span>
-                                    <input type="button" onclick="window.location='dangky.html'" value="Đăng ký"
-                                        class="btn btn-block btn-primary"> <span
-                                        class="d-block text-center my-4 text-muted"
-                                        style="margin-bottom: 1rem !important;margin-top: 1rem !important;"></span>
-                                    <div class="mb-4 text-center" style="display:flex;flex-direction: column;gap:20px">
-                                        <a style="border:1px solid #cc5d1b;padding-top:13px;text-decoration: none;width:100%"
-                                            id="login_vneid" class="btn btn-white" href="javascript:login_vneid();">
-                                            <img src="https://e-services.nafosted.gov.vn/images/vneidlogo.png"
-                                                style="width:26px"> Đăng nhập bằng VNeID (qua Cổng DVCQG)
-                                        </a>
-
-                                        <span class="d-block text-center my-4 text-muted"
-                                            style="margin-bottom: -10px !important;margin-top: -10px !important;">&mdash;
-                                            chưa có tài khoản &mdash;</span>
-                                        <a style="border:1px solid #cc5d1b;padding-top:13px;text-decoration: none;width:100%"
-                                            id="create_new_account_btn" class="btn btn-white" onclick="toggleView(this)"
-                                            href="javascript:;"> <img
-                                                src="https://e-services.nafosted.gov.vn/images/icon_list/create_new.png"
-                                                style="width:26px"> Tạo tài khoản mới
-                                        </a>
-                                    </div>
-                                </form>
-
+                                            </label>
+                                            <span class="ml-auto"><a href="javascript:void(0)" id="forgot_password_button" onclick="toggleView(this)" class="forgot-pass">Quên mật khẩu?</a></span> 
+                                        </div>
+                                        <p style="color:red;float: left;"></p>
+                                        <input type="button" onclick="handle_login_client()" value="Đăng nhập" class="btn btn-block btn-primary"> <span class="d-block text-center my-4 text-muted" style="margin-bottom: 1rem !important;margin-top: 1rem !important;">&mdash; hoặc &mdash;</span>
+                                        <input type="button" onclick="window.location='dangky.html'" value="Đăng ký" class="btn btn-block btn-primary"> <span class="d-block text-center my-4 text-muted" style="margin-bottom: 1rem !important;margin-top: 1rem !important;"></span>
+                                        <div class="mb-4 text-center" style="display:flex;flex-direction: column;gap:20px">
+                                            <a style="border:1px solid #cc5d1b;padding-top:13px;text-decoration: none;width:100%" id="login_vneid" class="btn btn-white"  href="javascript:login_vneid();">
+                                                <img src="https://e-services.nafosted.gov.vn/images/vneidlogo.png" style="width:26px"> Đăng nhập bằng VNeID (qua Cổng DVCQG)
+                                            </a>
+                                            
+                                            <span class="d-block text-center my-4 text-muted" style="margin-bottom: -10px !important;margin-top: -10px !important;">&mdash; chưa có tài khoản &mdash;</span>
+                                            <a style="border:1px solid #cc5d1b;padding-top:13px;text-decoration: none;width:100%" id="create_new_account_btn" class="btn btn-white" onclick="toggleView(this)" href="javascript:;"> <img src="https://e-services.nafosted.gov.vn/images/icon_list/create_new.png" style="width:26px"> Tạo tài khoản mới
+                                            </a>
+                                        </div>
+                                    </form>
+                                
                                 <!-- <form action="#" method="post" id="login_form_client">
                                     <div class="form-group first">
                                         <label for="email_login">E-mail</label>
@@ -317,8 +297,8 @@
 
             if (elem.id === 'forgot_password_button') {
                 $('#forgot_password_area').show();
-            // } else if (elem.id === 'create_new_account_btn') { // Nút "Tạo tài khoản mới"
-            //     $('#register_area').show();
+            } else if (elem.id === 'create_new_account_btn') { // Nút "Tạo tài khoản mới"
+                $('#register_area').show();
             } else if (elem.id === 'have_account_yes') { // Nút "Đã có tài khoản trên OMS cũ" (đồng bộ)
                 $('#sync_area').show();
             } else if (elem.id === 'login_button') { // Nút "Trở về trang đăng nhập"
@@ -341,39 +321,38 @@
         // --- Các hàm xử lý Đăng ký và Đăng nhập bằng LocalStorage (DEMO) ---
 
         function handle_login_client() {
-            const email = $('#email_login').val().trim().toLowerCase();
-            const pass = $('#password_login').val();
+            var email = $('#email_login').val().trim().toLowerCase();
+            var password = $('#password_login').val();
 
-            if (!email || !pass) { alert('Nhập email và mật khẩu!'); return; }
+            if (!email || !password) {
+                alert('Vui lòng điền đầy đủ email và mật khẩu!');
+                return false;
+            }
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbz5wSUYea9dXa2c0oE0EUepjQbxIvIaLuaf4ry6YvuVj30WSUbCRihRy9FV1Rxi2qJf/exec';
+            // Lấy danh sách người dùng từ localStorage (dạng mảng!)
+            var users = JSON.parse(localStorage.getItem('users')) || [];
+            // Tìm user khớp email và password
+            var found = users.find(u => u.email && u.email.toLowerCase() === email && u.password === password);
 
-            $.ajax({
-                url: scriptURL,
-                method: 'POST',
-                data: { action: 'login', email: email, password: pass },
-                success: function (res) {
-                    const data = JSON.parse(res);
-                    if (!data.success) {
-                        alert('Email hoặc mật khẩu không đúng!');
-                        return;
-                    }
-
-                    // Lưu CCCD và role để sang trang khác dùng
-                    localStorage.setItem('loggedInUser', data.cccd);
-                    localStorage.setItem('userRole', data.role);
+            if (found) {
+                var role = found.role;
+                view_loader();
+                setTimeout(function () {
+                    hide_loader();
                     alert('Đăng nhập thành công!');
-
-                    // Chuyển hướng tùy vai trò
-                    if (data.role === 'admin') {
+                    localStorage.setItem('loggedInUser', found.email);
+                    if (role === 'admin') {
                         window.location.href = 'admin.html';
                     } else {
                         window.location.href = 'test.html';
                     }
-                },
-                error: function () { alert('Không kết nối được tới server!'); }
-            });
+                }, 1000);
+            } else {
+                alert('Email hoặc mật khẩu không đúng!');
+            }
         }
+
+
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
