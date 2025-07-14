@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quản lý Giải thưởng</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    input, select { margin: 5px; padding: 5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #007bff; color: #fff; }
+    .center-btn { margin-top: 10px; }
+    .btn-main { padding: 8px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Trường Đại học Lạc Hồng</h1>
+
+  <h2>THÊM GIẢI THƯỞNG</h2>
+  <form id="awardForm">
+    <input name="tenDeTai" placeholder="Tên đề tài" required>
+    <input name="tenCuocThi" placeholder="Tên cuộc thi" required>
+    <input name="tacGia" placeholder="Tác giả/Nhóm tác" required>
+    <select name="donVi" required>
+      <option value="" disable selected>-- Chọn Khoa --</option>
+      <option value="Khoa Công nghệ Thông tin">Khoa Công nghệ Thông tin</option>
+      <option value="Khoa Kế toán">Khoa Kế toán</option>
+      <option value="Khoa Y Dược">Khoa Y Dược</option>
+      <option value="Khoa Đông phương học">Khoa Đông phương học</option>
+      <option value="Khoa Kỹ thuật Công trình">Khoa Kỹ thuật Công trình</option>
+      <option value="Khoa Cơ điện">Khoa Cơ điện</option>
+      <option value="Khoa Công nghệ Thực phẩm">Khoa Công nghệ Thực phẩm</option>
+    </select>
+    <select name="datGiai" required>
+      <option value="">-- Chọn Giải --</option>
+      <option value="Nhất">Nhất</option>
+      <option value="Nhì">Nhì</option>
+    </select>
+    <input name="tien" placeholder="Tiền" required>
+    <input name="ghiChu" placeholder="Ghi chú" required>
+    <input name="link" placeholder="Link" required>
+    <div class="center-btn">
+      <button type="submit" class="btn-main">Chờ xét duyệt</button>
+    </div>
+  </form>
+
+  <h2>Danh sách giải thưởng chờ xét duyệt</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>STT</th><th>TÊN ĐỀ TÀI</th><th>Cuộc thi</th><th>Tác giả</th><th>Đơn vị</th>
+        <th>Đạt giải</th><th>Tiền</th><th>Ghi chú</th><th>Link</th><th>Trạng thái</th><th>Xóa</th>
+      </tr>
+    </thead>
+    <tbody id="awardTableBody"></tbody>
+  </table>
+
+  <h2>Danh sách giải thưởng đã duyệt</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>STT</th><th>TÊN ĐỀ TÀI</th><th>Cuộc thi</th><th>Tác giả</th><th>Đơn vị</th>
+        <th>Đạt giải</th><th>Tiền</th><th>Ghi chú</th><th>Link</th><th>Trạng thái</th>
+      </tr>
+    </thead>
+    <tbody id="awardApprovedTableBody"></tbody>
+  </table>
+
+  <script src="giaithuong_test.js"></script>
+</body>
+</html>
